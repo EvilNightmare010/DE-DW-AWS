@@ -1,0 +1,19 @@
+[2026-10-28T13:10:10.711+0000] {plugins.py:37} INFO - setup plugin alembic.autogenerate.schemas
+[2026-10-28T13:10:10.715+0000] {plugins.py:37} INFO - setup plugin alembic.autogenerate.tables
+[2026-10-28T13:10:10.715+0000] {plugins.py:37} INFO - setup plugin alembic.autogenerate.types
+[2026-10-28T13:10:10.716+0000] {plugins.py:37} INFO - setup plugin alembic.autogenerate.constraints
+[2026-10-28T13:10:10.716+0000] {plugins.py:37} INFO - setup plugin alembic.autogenerate.defaults
+[2026-10-28T13:10:10.717+0000] {plugins.py:37} INFO - setup plugin alembic.autogenerate.comments
+dag_id             | run_id                               | state   | execution_date            | start_date                       | end_date                        
+===================+======================================+=========+===========================+==================================+=================================
+ecommerce_pipeline | manual__2026-10-28T13:03:17+00:00    | success | 2026-10-28T13:03:17+00:00 | 2026-10-28T13:03:32.240227+00:00 | 2026-10-28T13:04:52.157946+00:00
+ecommerce_pipeline | manual__2026-10-28T12:51:46+00:00    | failed  | 2026-10-28T12:51:46+00:00 | 2026-10-28T12:51:59.232688+00:00 | 2026-10-28T12:55:12.784846+00:00
+ecommerce_pipeline | manual__2026-10-28T12:16:46+00:00    | success | 2026-10-28T12:16:46+00:00 | 2026-10-28T12:17:08.209034+00:00 | 2026-10-28T12:19:22.540602+00:00
+ecommerce_pipeline | manual__2026-10-28T12:06:06+00:00    | failed  | 2026-10-28T12:06:06+00:00 | 2026-10-28T12:06:32.786643+00:00 | 2026-10-28T12:08:21.666020+00:00
+ecommerce_pipeline | manual__2026-10-28T12:02:15+00:00    | failed  | 2026-10-28T12:02:15+00:00 | 2026-10-28T12:02:37.189436+00:00 | 2026-10-28T12:03:36.047672+00:00
+ecommerce_pipeline | manual__2026-10-28T11:44:29+00:00    | failed  | 2026-10-28T11:44:29+00:00 | 2026-10-28T11:46:09.979350+00:00 | 2026-10-28T11:47:25.460684+00:00
+ecommerce_pipeline | scheduled__2026-10-27T11:00:00+00:00 | failed  | 2026-10-27T11:00:00+00:00 | 2026-10-28T11:47:27.369587+00:00 | 2026-10-28T11:48:42.441323+00:00
+ecommerce_pipeline | manual__2026-10-14T12:14:39+00:00    | failed  | 2026-10-14T12:14:39+00:00 | 2026-10-14T12:21:52.406701+00:00 | 2026-10-14T12:23:53.145347+00:00
+ecommerce_pipeline | scheduled__2026-10-14T11:00:00+00:00 | failed  | 2026-10-14T11:00:00+00:00 | 2026-10-28T11:44:52.719152+00:00 | 2026-10-28T11:46:09.636818+00:00
+ecommerce_pipeline | scheduled__2026-10-13T11:00:00+00:00 | failed  | 2026-10-13T11:00:00+00:00 | 2026-10-14T12:14:39.038682+00:00 | 2026-10-14T12:21:24.324139+00:00
+                                                                                                                                                                     

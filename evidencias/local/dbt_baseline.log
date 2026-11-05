@@ -1,0 +1,380 @@
+Installing locked dbt packages...
+ Container de-dw-airflow-scheduler-run-ce4f8b7c9ee0 Creating 
+ Container de-dw-airflow-scheduler-run-ce4f8b7c9ee0 Created 
+[0m13:07:36  Running with dbt=1.9.4
+[0m13:07:37  Installing dbt-labs/dbt_utils
+[0m13:07:38  Installed from version 1.3.0
+[0m13:07:38  Updated version available: 1.4.1
+[0m13:07:38  
+[0m13:07:38  Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+Loading seeds...
+ Container de-dw-airflow-scheduler-run-eeef7aa65b3a Creating 
+ Container de-dw-airflow-scheduler-run-eeef7aa65b3a Created 
+[0m13:07:42  Running with dbt=1.9.4
+[0m13:07:43  Registered adapter: duckdb=1.9.4
+[0m13:07:44  Found 33 models, 2 snapshots, 92 data tests, 2 seeds, 6 sources, 550 macros
+[0m13:07:44  
+[0m13:07:44  Concurrency: 1 threads (target='local')
+[0m13:07:44  
+[0m13:07:44  1 of 2 START seed file intermediate.colombia_holidays .......................... [RUN]
+[0m13:07:44  1 of 2 OK loaded seed file intermediate.colombia_holidays ...................... [[32mINSERT 53[0m in 0.09s]
+[0m13:07:44  2 of 2 START seed file intermediate.colombia_municipalities .................... [RUN]
+[0m13:07:44  2 of 2 OK loaded seed file intermediate.colombia_municipalities ................ [[32mINSERT 8[0m in 0.02s]
+[0m13:07:44  
+[0m13:07:44  Finished running 2 seeds in 0 hours 0 minutes and 0.32 seconds (0.32s).
+[0m13:07:44  
+[0m13:07:44  [32mCompleted successfully[0m
+[0m13:07:44  
+[0m13:07:44  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+Building intermediate models...
+ Container de-dw-airflow-scheduler-run-c617ea6260b6 Creating 
+ Container de-dw-airflow-scheduler-run-c617ea6260b6 Created 
+[0m13:07:49  Running with dbt=1.9.4
+[0m13:07:49  Registered adapter: duckdb=1.9.4
+[0m13:07:50  Found 33 models, 2 snapshots, 92 data tests, 2 seeds, 6 sources, 550 macros
+[0m13:07:50  
+[0m13:07:50  Concurrency: 1 threads (target='local')
+[0m13:07:50  
+[0m13:07:50  1 of 18 START sql view model intermediate.stg_mongodb__navigation_events ....... [RUN]
+[0m13:07:50  1 of 18 OK created sql view model intermediate.stg_mongodb__navigation_events .. [[32mOK[0m in 0.09s]
+[0m13:07:50  2 of 18 START sql view model intermediate.stg_mongodb__reviews ................. [RUN]
+[0m13:07:50  2 of 18 OK created sql view model intermediate.stg_mongodb__reviews ............ [[32mOK[0m in 0.04s]
+[0m13:07:50  3 of 18 START sql view model intermediate.stg_mysql__customers ................. [RUN]
+[0m13:07:50  3 of 18 OK created sql view model intermediate.stg_mysql__customers ............ [[32mOK[0m in 0.05s]
+[0m13:07:50  4 of 18 START sql view model intermediate.stg_mysql__order_items ............... [RUN]
+[0m13:07:50  4 of 18 OK created sql view model intermediate.stg_mysql__order_items .......... [[32mOK[0m in 0.05s]
+[0m13:07:50  5 of 18 START sql view model intermediate.stg_mysql__orders .................... [RUN]
+[0m13:07:50  5 of 18 OK created sql view model intermediate.stg_mysql__orders ............... [[32mOK[0m in 0.04s]
+[0m13:07:50  6 of 18 START sql view model intermediate.stg_mysql__products .................. [RUN]
+[0m13:07:50  6 of 18 OK created sql view model intermediate.stg_mysql__products ............. [[32mOK[0m in 0.04s]
+[0m13:07:50  7 of 18 START sql view model intermediate.int_mysql__customers__qa ............. [RUN]
+[0m13:07:50  7 of 18 OK created sql view model intermediate.int_mysql__customers__qa ........ [[32mOK[0m in 0.05s]
+[0m13:07:50  8 of 18 START sql view model intermediate.int_mysql__products__qa .............. [RUN]
+[0m13:07:51  8 of 18 OK created sql view model intermediate.int_mysql__products__qa ......... [[32mOK[0m in 0.05s]
+[0m13:07:51  9 of 18 START sql view model intermediate.int_mysql__customers__valid .......... [RUN]
+[0m13:07:51  9 of 18 OK created sql view model intermediate.int_mysql__customers__valid ..... [[32mOK[0m in 0.06s]
+[0m13:07:51  10 of 18 START sql view model intermediate.int_mysql__products__valid .......... [RUN]
+[0m13:07:51  10 of 18 OK created sql view model intermediate.int_mysql__products__valid ..... [[32mOK[0m in 0.05s]
+[0m13:07:51  11 of 18 START sql view model intermediate.int_mysql__orders__qa ............... [RUN]
+[0m13:07:51  11 of 18 OK created sql view model intermediate.int_mysql__orders__qa .......... [[32mOK[0m in 0.04s]
+[0m13:07:51  12 of 18 START sql view model intermediate.int_mongodb__navigation_events__qa .. [RUN]
+[0m13:07:51  12 of 18 OK created sql view model intermediate.int_mongodb__navigation_events__qa  [[32mOK[0m in 0.04s]
+[0m13:07:51  13 of 18 START sql view model intermediate.int_mongodb__reviews__qa ............ [RUN]
+[0m13:07:51  13 of 18 OK created sql view model intermediate.int_mongodb__reviews__qa ....... [[32mOK[0m in 0.05s]
+[0m13:07:51  14 of 18 START sql view model intermediate.int_mysql__orders__valid ............ [RUN]
+[0m13:07:51  14 of 18 OK created sql view model intermediate.int_mysql__orders__valid ....... [[32mOK[0m in 0.04s]
+[0m13:07:51  15 of 18 START sql view model intermediate.int_mongodb__navigation_events__valid  [RUN]
+[0m13:07:51  15 of 18 OK created sql view model intermediate.int_mongodb__navigation_events__valid  [[32mOK[0m in 0.04s]
+[0m13:07:51  16 of 18 START sql view model intermediate.int_mongodb__reviews__valid ......... [RUN]
+[0m13:07:51  16 of 18 OK created sql view model intermediate.int_mongodb__reviews__valid .... [[32mOK[0m in 0.05s]
+[0m13:07:51  17 of 18 START sql view model intermediate.int_mysql__order_items__qa .......... [RUN]
+[0m13:07:51  17 of 18 OK created sql view model intermediate.int_mysql__order_items__qa ..... [[32mOK[0m in 0.05s]
+[0m13:07:51  18 of 18 START sql view model intermediate.int_mysql__order_items__valid ....... [RUN]
+[0m13:07:51  18 of 18 OK created sql view model intermediate.int_mysql__order_items__valid .. [[32mOK[0m in 0.04s]
+[0m13:07:51  
+[0m13:07:51  Finished running 18 view models in 0 hours 0 minutes and 1.15 seconds (1.15s).
+[0m13:07:51  
+[0m13:07:51  [32mCompleted successfully[0m
+[0m13:07:51  
+[0m13:07:51  Done. PASS=18 WARN=0 ERROR=0 SKIP=0 TOTAL=18
+Updating snapshots...
+ Container de-dw-airflow-scheduler-run-dce5e01f49b0 Creating 
+ Container de-dw-airflow-scheduler-run-dce5e01f49b0 Created 
+[0m13:07:55  Running with dbt=1.9.4
+[0m13:07:56  Registered adapter: duckdb=1.9.4
+[0m13:07:56  Found 33 models, 2 snapshots, 92 data tests, 2 seeds, 6 sources, 550 macros
+[0m13:07:56  
+[0m13:07:56  Concurrency: 1 threads (target='local')
+[0m13:07:56  
+[0m13:07:56  1 of 2 START snapshot intermediate.snap_dim_customer ........................... [RUN]
+[0m13:07:57  1 of 2 OK snapshotted intermediate.snap_dim_customer ........................... [[32mOK[0m in 0.25s]
+[0m13:07:57  2 of 2 START snapshot intermediate.snap_dim_product ............................ [RUN]
+[0m13:07:57  2 of 2 OK snapshotted intermediate.snap_dim_product ............................ [[32mOK[0m in 0.27s]
+[0m13:07:57  
+[0m13:07:57  Finished running 2 snapshots in 0 hours 0 minutes and 0.83 seconds (0.83s).
+[0m13:07:57  
+[0m13:07:57  [32mCompleted successfully[0m
+[0m13:07:57  
+[0m13:07:57  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+Building warehouse models...
+ Container de-dw-airflow-scheduler-run-89265d960022 Creating 
+ Container de-dw-airflow-scheduler-run-89265d960022 Created 
+[0m13:08:01  Running with dbt=1.9.4
+[0m13:08:02  Registered adapter: duckdb=1.9.4
+[0m13:08:02  Found 33 models, 2 snapshots, 92 data tests, 2 seeds, 6 sources, 550 macros
+[0m13:08:02  
+[0m13:08:02  Concurrency: 1 threads (target='local')
+[0m13:08:02  
+[0m13:08:02  1 of 33 START sql table model marts.dim_date ................................... [RUN]
+[0m13:08:03  1 of 33 OK created sql table model marts.dim_date .............................. [[32mOK[0m in 0.18s]
+[0m13:08:03  2 of 33 START sql table model marts.dim_geography .............................. [RUN]
+[0m13:08:03  2 of 33 OK created sql table model marts.dim_geography ......................... [[32mOK[0m in 0.05s]
+[0m13:08:03  3 of 33 START sql view model intermediate.stg_mongodb__navigation_events ....... [RUN]
+[0m13:08:03  3 of 33 OK created sql view model intermediate.stg_mongodb__navigation_events .. [[32mOK[0m in 0.06s]
+[0m13:08:03  4 of 33 START sql view model intermediate.stg_mongodb__reviews ................. [RUN]
+[0m13:08:03  4 of 33 OK created sql view model intermediate.stg_mongodb__reviews ............ [[32mOK[0m in 0.05s]
+[0m13:08:03  5 of 33 START sql view model intermediate.stg_mysql__customers ................. [RUN]
+[0m13:08:03  5 of 33 OK created sql view model intermediate.stg_mysql__customers ............ [[32mOK[0m in 0.04s]
+[0m13:08:03  6 of 33 START sql view model intermediate.stg_mysql__order_items ............... [RUN]
+[0m13:08:03  6 of 33 OK created sql view model intermediate.stg_mysql__order_items .......... [[32mOK[0m in 0.04s]
+[0m13:08:03  7 of 33 START sql view model intermediate.stg_mysql__orders .................... [RUN]
+[0m13:08:03  7 of 33 OK created sql view model intermediate.stg_mysql__orders ............... [[32mOK[0m in 0.04s]
+[0m13:08:03  8 of 33 START sql view model intermediate.stg_mysql__products .................. [RUN]
+[0m13:08:03  8 of 33 OK created sql view model intermediate.stg_mysql__products ............. [[32mOK[0m in 0.04s]
+[0m13:08:03  9 of 33 START sql view model intermediate.int_mysql__customers__qa ............. [RUN]
+[0m13:08:03  9 of 33 OK created sql view model intermediate.int_mysql__customers__qa ........ [[32mOK[0m in 0.04s]
+[0m13:08:03  10 of 33 START sql view model intermediate.int_mysql__products__qa ............. [RUN]
+[0m13:08:03  10 of 33 OK created sql view model intermediate.int_mysql__products__qa ........ [[32mOK[0m in 0.08s]
+[0m13:08:03  11 of 33 START sql view model intermediate.int_mysql__customers__valid ......... [RUN]
+[0m13:08:03  11 of 33 OK created sql view model intermediate.int_mysql__customers__valid .... [[32mOK[0m in 0.07s]
+[0m13:08:03  12 of 33 START sql table model quarantine.quarantine_mysql__customers .......... [RUN]
+[0m13:08:03  12 of 33 OK created sql table model quarantine.quarantine_mysql__customers ..... [[32mOK[0m in 0.07s]
+[0m13:08:03  13 of 33 START sql view model intermediate.int_mysql__products__valid .......... [RUN]
+[0m13:08:03  13 of 33 OK created sql view model intermediate.int_mysql__products__valid ..... [[32mOK[0m in 0.04s]
+[0m13:08:03  14 of 33 START sql table model quarantine.quarantine_mysql__products ........... [RUN]
+[0m13:08:03  14 of 33 OK created sql table model quarantine.quarantine_mysql__products ...... [[32mOK[0m in 0.04s]
+[0m13:08:03  15 of 33 START sql table model marts.dim_customer .............................. [RUN]
+[0m13:08:03  15 of 33 OK created sql table model marts.dim_customer ......................... [[32mOK[0m in 0.05s]
+[0m13:08:03  16 of 33 START sql view model intermediate.int_mysql__orders__qa ............... [RUN]
+[0m13:08:03  16 of 33 OK created sql view model intermediate.int_mysql__orders__qa .......... [[32mOK[0m in 0.05s]
+[0m13:08:03  17 of 33 START sql table model marts.dim_product ............................... [RUN]
+[0m13:08:04  17 of 33 OK created sql table model marts.dim_product .......................... [[32mOK[0m in 0.04s]
+[0m13:08:04  18 of 33 START sql view model intermediate.int_mongodb__navigation_events__qa .. [RUN]
+[0m13:08:04  18 of 33 OK created sql view model intermediate.int_mongodb__navigation_events__qa  [[32mOK[0m in 0.05s]
+[0m13:08:04  19 of 33 START sql view model intermediate.int_mongodb__reviews__qa ............ [RUN]
+[0m13:08:04  19 of 33 OK created sql view model intermediate.int_mongodb__reviews__qa ....... [[32mOK[0m in 0.04s]
+[0m13:08:04  20 of 33 START sql view model intermediate.int_mysql__orders__valid ............ [RUN]
+[0m13:08:04  20 of 33 OK created sql view model intermediate.int_mysql__orders__valid ....... [[32mOK[0m in 0.05s]
+[0m13:08:04  21 of 33 START sql table model quarantine.quarantine_mysql__orders ............. [RUN]
+[0m13:08:04  21 of 33 OK created sql table model quarantine.quarantine_mysql__orders ........ [[32mOK[0m in 0.05s]
+[0m13:08:04  22 of 33 START sql view model intermediate.int_mongodb__navigation_events__valid  [RUN]
+[0m13:08:04  22 of 33 OK created sql view model intermediate.int_mongodb__navigation_events__valid  [[32mOK[0m in 0.05s]
+[0m13:08:04  23 of 33 START sql table model quarantine.quarantine_mongodb__navigation_events  [RUN]
+[0m13:08:04  23 of 33 OK created sql table model quarantine.quarantine_mongodb__navigation_events  [[32mOK[0m in 0.05s]
+[0m13:08:04  24 of 33 START sql view model intermediate.int_mongodb__reviews__valid ......... [RUN]
+[0m13:08:04  24 of 33 OK created sql view model intermediate.int_mongodb__reviews__valid .... [[32mOK[0m in 0.06s]
+[0m13:08:04  25 of 33 START sql table model quarantine.quarantine_mongodb__reviews .......... [RUN]
+[0m13:08:04  25 of 33 OK created sql table model quarantine.quarantine_mongodb__reviews ..... [[32mOK[0m in 0.05s]
+[0m13:08:04  26 of 33 START sql view model intermediate.int_mysql__order_items__qa .......... [RUN]
+[0m13:08:05  26 of 33 OK created sql view model intermediate.int_mysql__order_items__qa ..... [[32mOK[0m in 0.05s]
+[0m13:08:05  27 of 33 START sql table model marts.dim_event_type ............................ [RUN]
+[0m13:08:05  27 of 33 OK created sql table model marts.dim_event_type ....................... [[32mOK[0m in 0.05s]
+[0m13:08:05  28 of 33 START sql table model marts.dim_sales_channel ......................... [RUN]
+[0m13:08:05  28 of 33 OK created sql table model marts.dim_sales_channel .................... [[32mOK[0m in 0.05s]
+[0m13:08:05  29 of 33 START sql incremental model marts.fct_reviews ......................... [RUN]
+[0m13:08:05  29 of 33 OK created sql incremental model marts.fct_reviews .................... [[32mOK[0m in 0.15s]
+[0m13:08:05  30 of 33 START sql view model intermediate.int_mysql__order_items__valid ....... [RUN]
+[0m13:08:05  30 of 33 OK created sql view model intermediate.int_mysql__order_items__valid .. [[32mOK[0m in 0.05s]
+[0m13:08:05  31 of 33 START sql table model quarantine.quarantine_mysql__order_items ........ [RUN]
+[0m13:08:05  31 of 33 OK created sql table model quarantine.quarantine_mysql__order_items ... [[32mOK[0m in 0.05s]
+[0m13:08:05  32 of 33 START sql incremental model marts.fct_navigation_events ............... [RUN]
+[0m13:08:05  32 of 33 OK created sql incremental model marts.fct_navigation_events .......... [[32mOK[0m in 0.09s]
+[0m13:08:05  33 of 33 START sql incremental model marts.fct_sales ........................... [RUN]
+[0m13:08:05  33 of 33 OK created sql incremental model marts.fct_sales ...................... [[32mOK[0m in 0.10s]
+[0m13:08:05  
+[0m13:08:05  Finished running 3 incremental models, 12 table models, 18 view models in 0 hours 0 minutes and 2.89 seconds (2.89s).
+[0m13:08:05  
+[0m13:08:05  [32mCompleted successfully[0m
+[0m13:08:05  
+[0m13:08:05  Done. PASS=33 WARN=0 ERROR=0 SKIP=0 TOTAL=33
+Running dbt data tests...
+ Container de-dw-airflow-scheduler-run-0d7989bba651 Creating 
+ Container de-dw-airflow-scheduler-run-0d7989bba651 Created 
+[0m13:08:10  Running with dbt=1.9.4
+[0m13:08:10  Registered adapter: duckdb=1.9.4
+[0m13:08:11  Found 33 models, 2 snapshots, 92 data tests, 2 seeds, 6 sources, 550 macros
+[0m13:08:11  
+[0m13:08:11  Concurrency: 1 threads (target='local')
+[0m13:08:11  
+[0m13:08:11  1 of 92 START test accepted_values_dim_event_type_event_type___var_valid_event_types_  [RUN]
+[0m13:08:11  1 of 92 PASS accepted_values_dim_event_type_event_type___var_valid_event_types_  [[32mPASS[0m in 0.05s]
+[0m13:08:11  2 of 92 START test accepted_values_int_mongodb__navigation_events__qa_rejection_reason__invalid_event_type__missing_occurred_at__orphan_product__orphan_customer__invalid_sales_channel  [RUN]
+[0m13:08:11  2 of 92 PASS accepted_values_int_mongodb__navigation_events__qa_rejection_reason__invalid_event_type__missing_occurred_at__orphan_product__orphan_customer__invalid_sales_channel  [[32mPASS[0m in 0.04s]
+[0m13:08:11  3 of 92 START test accepted_values_int_mongodb__reviews__qa_rejection_reason__invalid_rating__missing_reviewed_at__orphan_customer__orphan_product  [RUN]
+[0m13:08:11  3 of 92 PASS accepted_values_int_mongodb__reviews__qa_rejection_reason__invalid_rating__missing_reviewed_at__orphan_customer__orphan_product  [[32mPASS[0m in 0.03s]
+[0m13:08:11  4 of 92 START test accepted_values_int_mysql__customers__qa_rejection_reason__missing_name__invalid_email  [RUN]
+[0m13:08:11  4 of 92 PASS accepted_values_int_mysql__customers__qa_rejection_reason__missing_name__invalid_email  [[32mPASS[0m in 0.02s]
+[0m13:08:11  5 of 92 START test accepted_values_int_mysql__order_items__qa_rejection_reason__orphan_order__orphan_product__invalid_quantity__subtotal_mismatch  [RUN]
+[0m13:08:11  5 of 92 PASS accepted_values_int_mysql__order_items__qa_rejection_reason__orphan_order__orphan_product__invalid_quantity__subtotal_mismatch  [[32mPASS[0m in 0.04s]
+[0m13:08:11  6 of 92 START test accepted_values_int_mysql__orders__qa_rejection_reason__orphan_customer__invalid_sales_channel__negative_total  [RUN]
+[0m13:08:11  6 of 92 PASS accepted_values_int_mysql__orders__qa_rejection_reason__orphan_customer__invalid_sales_channel__negative_total  [[32mPASS[0m in 0.04s]
+[0m13:08:11  7 of 92 START test accepted_values_int_mysql__products__qa_rejection_reason__missing_category__negative_price  [RUN]
+[0m13:08:11  7 of 92 PASS accepted_values_int_mysql__products__qa_rejection_reason__missing_category__negative_price  [[32mPASS[0m in 0.04s]
+[0m13:08:11  8 of 92 START test assert_dim_date_covers_configured_range ..................... [RUN]
+[0m13:08:11  8 of 92 PASS assert_dim_date_covers_configured_range ........................... [[32mPASS[0m in 0.02s]
+[0m13:08:11  9 of 92 START test assert_every_year_has_holidays .............................. [RUN]
+[0m13:08:11  9 of 92 PASS assert_every_year_has_holidays .................................... [[32mPASS[0m in 0.02s]
+[0m13:08:11  10 of 92 START test assert_mongo_facts_use_bogota_business_date ................ [RUN]
+[0m13:08:11  10 of 92 PASS assert_mongo_facts_use_bogota_business_date ...................... [[32mPASS[0m in 0.13s]
+[0m13:08:11  11 of 92 START test assert_sales_dates_match_raw_order_dates ................... [RUN]
+[0m13:08:11  11 of 92 PASS assert_sales_dates_match_raw_order_dates ......................... [[32mPASS[0m in 0.05s]
+[0m13:08:11  12 of 92 START test assert_sales_totals_match_source_by_business_date .......... [RUN]
+[0m13:08:11  12 of 92 PASS assert_sales_totals_match_source_by_business_date ................ [[32mPASS[0m in 0.06s]
+[0m13:08:11  13 of 92 START test dbt_utils_accepted_range_fct_reviews_rating__True__5__1 .... [RUN]
+[0m13:08:11  13 of 92 PASS dbt_utils_accepted_range_fct_reviews_rating__True__5__1 .......... [[32mPASS[0m in 0.03s]
+[0m13:08:11  14 of 92 START test not_null_colombia_holidays_date ............................ [RUN]
+[0m13:08:11  14 of 92 PASS not_null_colombia_holidays_date .................................. [[32mPASS[0m in 0.02s]
+[0m13:08:11  15 of 92 START test not_null_colombia_holidays_holiday_name .................... [RUN]
+[0m13:08:11  15 of 92 PASS not_null_colombia_holidays_holiday_name .......................... [[32mPASS[0m in 0.03s]
+[0m13:08:11  16 of 92 START test not_null_colombia_municipalities_city ...................... [RUN]
+[0m13:08:11  16 of 92 PASS not_null_colombia_municipalities_city ............................ [[32mPASS[0m in 0.02s]
+[0m13:08:11  17 of 92 START test not_null_colombia_municipalities_country ................... [RUN]
+[0m13:08:11  17 of 92 PASS not_null_colombia_municipalities_country ......................... [[32mPASS[0m in 0.03s]
+[0m13:08:11  18 of 92 START test not_null_colombia_municipalities_department ................ [RUN]
+[0m13:08:11  18 of 92 PASS not_null_colombia_municipalities_department ...................... [[32mPASS[0m in 0.03s]
+[0m13:08:11  19 of 92 START test not_null_dim_customer_customer_sk .......................... [RUN]
+[0m13:08:12  19 of 92 PASS not_null_dim_customer_customer_sk ................................ [[32mPASS[0m in 0.03s]
+[0m13:08:12  20 of 92 START test not_null_dim_customer_is_current ........................... [RUN]
+[0m13:08:12  20 of 92 PASS not_null_dim_customer_is_current ................................. [[32mPASS[0m in 0.03s]
+[0m13:08:12  21 of 92 START test not_null_dim_customer_valid_from ........................... [RUN]
+[0m13:08:12  21 of 92 PASS not_null_dim_customer_valid_from ................................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  22 of 92 START test not_null_dim_date_date_sk .................................. [RUN]
+[0m13:08:12  22 of 92 PASS not_null_dim_date_date_sk ........................................ [[32mPASS[0m in 0.02s]
+[0m13:08:12  23 of 92 START test not_null_dim_event_type_event_type ......................... [RUN]
+[0m13:08:12  23 of 92 PASS not_null_dim_event_type_event_type ............................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  24 of 92 START test not_null_dim_event_type_event_type_sk ...................... [RUN]
+[0m13:08:12  24 of 92 PASS not_null_dim_event_type_event_type_sk ............................ [[32mPASS[0m in 0.02s]
+[0m13:08:12  25 of 92 START test not_null_dim_geography_geography_sk ........................ [RUN]
+[0m13:08:12  25 of 92 PASS not_null_dim_geography_geography_sk .............................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  26 of 92 START test not_null_dim_product_is_current ............................ [RUN]
+[0m13:08:12  26 of 92 PASS not_null_dim_product_is_current .................................. [[32mPASS[0m in 0.03s]
+[0m13:08:12  27 of 92 START test not_null_dim_product_product_sk ............................ [RUN]
+[0m13:08:12  27 of 92 PASS not_null_dim_product_product_sk .................................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  28 of 92 START test not_null_dim_product_valid_from ............................ [RUN]
+[0m13:08:12  28 of 92 PASS not_null_dim_product_valid_from .................................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  29 of 92 START test not_null_dim_sales_channel_sales_channel_sk ................ [RUN]
+[0m13:08:12  29 of 92 PASS not_null_dim_sales_channel_sales_channel_sk ...................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  30 of 92 START test not_null_fct_navigation_events_date_sk ..................... [RUN]
+[0m13:08:12  30 of 92 PASS not_null_fct_navigation_events_date_sk ........................... [[32mPASS[0m in 0.03s]
+[0m13:08:12  31 of 92 START test not_null_fct_navigation_events_event_type_sk ............... [RUN]
+[0m13:08:12  31 of 92 PASS not_null_fct_navigation_events_event_type_sk ..................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  32 of 92 START test not_null_fct_navigation_events_navigation_event_sk ......... [RUN]
+[0m13:08:12  32 of 92 PASS not_null_fct_navigation_events_navigation_event_sk ............... [[32mPASS[0m in 0.02s]
+[0m13:08:12  33 of 92 START test not_null_fct_navigation_events_product_sk .................. [RUN]
+[0m13:08:12  33 of 92 PASS not_null_fct_navigation_events_product_sk ........................ [[32mPASS[0m in 0.02s]
+[0m13:08:12  34 of 92 START test not_null_fct_navigation_events_sales_channel_sk ............ [RUN]
+[0m13:08:12  34 of 92 PASS not_null_fct_navigation_events_sales_channel_sk .................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  35 of 92 START test not_null_fct_reviews_customer_sk ........................... [RUN]
+[0m13:08:12  35 of 92 PASS not_null_fct_reviews_customer_sk ................................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  36 of 92 START test not_null_fct_reviews_date_sk ............................... [RUN]
+[0m13:08:12  36 of 92 PASS not_null_fct_reviews_date_sk ..................................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  37 of 92 START test not_null_fct_reviews_product_sk ............................ [RUN]
+[0m13:08:12  37 of 92 PASS not_null_fct_reviews_product_sk .................................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  38 of 92 START test not_null_fct_reviews_rating ................................ [RUN]
+[0m13:08:12  38 of 92 PASS not_null_fct_reviews_rating ...................................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  39 of 92 START test not_null_fct_reviews_review_sk ............................. [RUN]
+[0m13:08:12  39 of 92 PASS not_null_fct_reviews_review_sk ................................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  40 of 92 START test not_null_fct_sales_customer_sk ............................. [RUN]
+[0m13:08:12  40 of 92 PASS not_null_fct_sales_customer_sk ................................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  41 of 92 START test not_null_fct_sales_date_sk ................................. [RUN]
+[0m13:08:12  41 of 92 PASS not_null_fct_sales_date_sk ....................................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  42 of 92 START test not_null_fct_sales_geography_sk ............................ [RUN]
+[0m13:08:12  42 of 92 PASS not_null_fct_sales_geography_sk .................................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  43 of 92 START test not_null_fct_sales_product_sk .............................. [RUN]
+[0m13:08:12  43 of 92 PASS not_null_fct_sales_product_sk .................................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  44 of 92 START test not_null_fct_sales_sale_sk ................................. [RUN]
+[0m13:08:12  44 of 92 PASS not_null_fct_sales_sale_sk ....................................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  45 of 92 START test not_null_fct_sales_sales_channel_sk ........................ [RUN]
+[0m13:08:12  45 of 92 PASS not_null_fct_sales_sales_channel_sk .............................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  46 of 92 START test not_null_int_mongodb__navigation_events__valid_event_id .... [RUN]
+[0m13:08:12  46 of 92 PASS not_null_int_mongodb__navigation_events__valid_event_id .......... [[32mPASS[0m in 0.02s]
+[0m13:08:12  47 of 92 START test not_null_int_mongodb__reviews__valid_review_id ............. [RUN]
+[0m13:08:12  47 of 92 PASS not_null_int_mongodb__reviews__valid_review_id ................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  48 of 92 START test not_null_int_mysql__customers__valid_customer_id ........... [RUN]
+[0m13:08:12  48 of 92 PASS not_null_int_mysql__customers__valid_customer_id ................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  49 of 92 START test not_null_int_mysql__order_items__valid_order_item_id ....... [RUN]
+[0m13:08:12  49 of 92 PASS not_null_int_mysql__order_items__valid_order_item_id ............. [[32mPASS[0m in 0.02s]
+[0m13:08:12  50 of 92 START test not_null_int_mysql__orders__valid_order_id ................. [RUN]
+[0m13:08:12  50 of 92 PASS not_null_int_mysql__orders__valid_order_id ....................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  51 of 92 START test not_null_int_mysql__products__valid_product_id ............. [RUN]
+[0m13:08:12  51 of 92 PASS not_null_int_mysql__products__valid_product_id ................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  52 of 92 START test not_null_stg_mongodb__navigation_events_event_id ........... [RUN]
+[0m13:08:12  52 of 92 PASS not_null_stg_mongodb__navigation_events_event_id ................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  53 of 92 START test not_null_stg_mongodb__reviews_review_id .................... [RUN]
+[0m13:08:12  53 of 92 PASS not_null_stg_mongodb__reviews_review_id .......................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  54 of 92 START test not_null_stg_mysql__customers_customer_id .................. [RUN]
+[0m13:08:12  54 of 92 PASS not_null_stg_mysql__customers_customer_id ........................ [[32mPASS[0m in 0.02s]
+[0m13:08:12  55 of 92 START test not_null_stg_mysql__order_items_order_item_id .............. [RUN]
+[0m13:08:12  55 of 92 PASS not_null_stg_mysql__order_items_order_item_id .................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  56 of 92 START test not_null_stg_mysql__orders_order_id ........................ [RUN]
+[0m13:08:12  56 of 92 PASS not_null_stg_mysql__orders_order_id .............................. [[32mPASS[0m in 0.02s]
+[0m13:08:12  57 of 92 START test not_null_stg_mysql__products_product_id .................... [RUN]
+[0m13:08:12  57 of 92 PASS not_null_stg_mysql__products_product_id .......................... [[32mPASS[0m in 0.02s]
+[0m13:08:12  58 of 92 START test relationships_fct_navigation_events_customer_sk__customer_sk__ref_dim_customer_  [RUN]
+[0m13:08:12  58 of 92 PASS relationships_fct_navigation_events_customer_sk__customer_sk__ref_dim_customer_  [[32mPASS[0m in 0.02s]
+[0m13:08:12  59 of 92 START test relationships_fct_navigation_events_date_sk__date_sk__ref_dim_date_  [RUN]
+[0m13:08:12  59 of 92 PASS relationships_fct_navigation_events_date_sk__date_sk__ref_dim_date_  [[32mPASS[0m in 0.02s]
+[0m13:08:12  60 of 92 START test relationships_fct_navigation_events_event_type_sk__event_type_sk__ref_dim_event_type_  [RUN]
+[0m13:08:13  60 of 92 PASS relationships_fct_navigation_events_event_type_sk__event_type_sk__ref_dim_event_type_  [[32mPASS[0m in 0.02s]
+[0m13:08:13  61 of 92 START test relationships_fct_navigation_events_product_sk__product_sk__ref_dim_product_  [RUN]
+[0m13:08:13  61 of 92 PASS relationships_fct_navigation_events_product_sk__product_sk__ref_dim_product_  [[32mPASS[0m in 0.02s]
+[0m13:08:13  62 of 92 START test relationships_fct_navigation_events_sales_channel_sk__sales_channel_sk__ref_dim_sales_channel_  [RUN]
+[0m13:08:13  62 of 92 PASS relationships_fct_navigation_events_sales_channel_sk__sales_channel_sk__ref_dim_sales_channel_  [[32mPASS[0m in 0.02s]
+[0m13:08:13  63 of 92 START test relationships_fct_reviews_customer_sk__customer_sk__ref_dim_customer_  [RUN]
+[0m13:08:13  63 of 92 PASS relationships_fct_reviews_customer_sk__customer_sk__ref_dim_customer_  [[32mPASS[0m in 0.02s]
+[0m13:08:13  64 of 92 START test relationships_fct_reviews_date_sk__date_sk__ref_dim_date_ .. [RUN]
+[0m13:08:13  64 of 92 PASS relationships_fct_reviews_date_sk__date_sk__ref_dim_date_ ........ [[32mPASS[0m in 0.02s]
+[0m13:08:13  65 of 92 START test relationships_fct_reviews_product_sk__product_sk__ref_dim_product_  [RUN]
+[0m13:08:13  65 of 92 PASS relationships_fct_reviews_product_sk__product_sk__ref_dim_product_  [[32mPASS[0m in 0.03s]
+[0m13:08:13  66 of 92 START test relationships_fct_sales_customer_sk__customer_sk__ref_dim_customer_  [RUN]
+[0m13:08:13  66 of 92 PASS relationships_fct_sales_customer_sk__customer_sk__ref_dim_customer_  [[32mPASS[0m in 0.02s]
+[0m13:08:13  67 of 92 START test relationships_fct_sales_date_sk__date_sk__ref_dim_date_ .... [RUN]
+[0m13:08:13  67 of 92 PASS relationships_fct_sales_date_sk__date_sk__ref_dim_date_ .......... [[32mPASS[0m in 0.02s]
+[0m13:08:13  68 of 92 START test relationships_fct_sales_geography_sk__geography_sk__ref_dim_geography_  [RUN]
+[0m13:08:13  68 of 92 PASS relationships_fct_sales_geography_sk__geography_sk__ref_dim_geography_  [[32mPASS[0m in 0.02s]
+[0m13:08:13  69 of 92 START test relationships_fct_sales_product_sk__product_sk__ref_dim_product_  [RUN]
+[0m13:08:13  69 of 92 PASS relationships_fct_sales_product_sk__product_sk__ref_dim_product_ . [[32mPASS[0m in 0.02s]
+[0m13:08:13  70 of 92 START test relationships_fct_sales_sales_channel_sk__sales_channel_sk__ref_dim_sales_channel_  [RUN]
+[0m13:08:13  70 of 92 PASS relationships_fct_sales_sales_channel_sk__sales_channel_sk__ref_dim_sales_channel_  [[32mPASS[0m in 0.03s]
+[0m13:08:13  71 of 92 START test unique_colombia_holidays_date .............................. [RUN]
+[0m13:08:13  71 of 92 PASS unique_colombia_holidays_date .................................... [[32mPASS[0m in 0.02s]
+[0m13:08:13  72 of 92 START test unique_dim_customer_customer_sk ............................ [RUN]
+[0m13:08:13  72 of 92 PASS unique_dim_customer_customer_sk .................................. [[32mPASS[0m in 0.03s]
+[0m13:08:13  73 of 92 START test unique_dim_date_date_sk .................................... [RUN]
+[0m13:08:13  73 of 92 PASS unique_dim_date_date_sk .......................................... [[32mPASS[0m in 0.02s]
+[0m13:08:13  74 of 92 START test unique_dim_event_type_event_type_sk ........................ [RUN]
+[0m13:08:13  74 of 92 PASS unique_dim_event_type_event_type_sk .............................. [[32mPASS[0m in 0.02s]
+[0m13:08:13  75 of 92 START test unique_dim_geography_geography_sk .......................... [RUN]
+[0m13:08:13  75 of 92 PASS unique_dim_geography_geography_sk ................................ [[32mPASS[0m in 0.03s]
+[0m13:08:13  76 of 92 START test unique_dim_product_product_sk .............................. [RUN]
+[0m13:08:13  76 of 92 PASS unique_dim_product_product_sk .................................... [[32mPASS[0m in 0.02s]
+[0m13:08:13  77 of 92 START test unique_dim_sales_channel_sales_channel_sk .................. [RUN]
+[0m13:08:13  77 of 92 PASS unique_dim_sales_channel_sales_channel_sk ........................ [[32mPASS[0m in 0.02s]
+[0m13:08:13  78 of 92 START test unique_fct_navigation_events_navigation_event_sk ........... [RUN]
+[0m13:08:13  78 of 92 PASS unique_fct_navigation_events_navigation_event_sk ................. [[32mPASS[0m in 0.02s]
+[0m13:08:13  79 of 92 START test unique_fct_reviews_review_sk ............................... [RUN]
+[0m13:08:13  79 of 92 PASS unique_fct_reviews_review_sk ..................................... [[32mPASS[0m in 0.02s]
+[0m13:08:13  80 of 92 START test unique_fct_sales_sale_sk ................................... [RUN]
+[0m13:08:13  80 of 92 PASS unique_fct_sales_sale_sk ......................................... [[32mPASS[0m in 0.02s]
+[0m13:08:13  81 of 92 START test unique_int_mongodb__navigation_events__valid_event_id ...... [RUN]
+[0m13:08:13  81 of 92 PASS unique_int_mongodb__navigation_events__valid_event_id ............ [[32mPASS[0m in 0.02s]
+[0m13:08:13  82 of 92 START test unique_int_mongodb__reviews__valid_review_id ............... [RUN]
+[0m13:08:13  82 of 92 PASS unique_int_mongodb__reviews__valid_review_id ..................... [[32mPASS[0m in 0.02s]
+[0m13:08:13  83 of 92 START test unique_int_mysql__customers__valid_customer_id ............. [RUN]
+[0m13:08:13  83 of 92 PASS unique_int_mysql__customers__valid_customer_id ................... [[32mPASS[0m in 0.02s]
+[0m13:08:13  84 of 92 START test unique_int_mysql__order_items__valid_order_item_id ......... [RUN]
+[0m13:08:13  84 of 92 PASS unique_int_mysql__order_items__valid_order_item_id ............... [[32mPASS[0m in 0.03s]
+[0m13:08:13  85 of 92 START test unique_int_mysql__orders__valid_order_id ................... [RUN]
+[0m13:08:13  85 of 92 PASS unique_int_mysql__orders__valid_order_id ......................... [[32mPASS[0m in 0.03s]
+[0m13:08:13  86 of 92 START test unique_int_mysql__products__valid_product_id ............... [RUN]
+[0m13:08:13  86 of 92 PASS unique_int_mysql__products__valid_product_id ..................... [[32mPASS[0m in 0.02s]
+[0m13:08:13  87 of 92 START test unique_stg_mongodb__navigation_events_event_id ............. [RUN]
+[0m13:08:13  87 of 92 PASS unique_stg_mongodb__navigation_events_event_id ................... [[32mPASS[0m in 0.02s]
+[0m13:08:13  88 of 92 START test unique_stg_mongodb__reviews_review_id ...................... [RUN]
+[0m13:08:13  88 of 92 PASS unique_stg_mongodb__reviews_review_id ............................ [[32mPASS[0m in 0.02s]
+[0m13:08:13  89 of 92 START test unique_stg_mysql__customers_customer_id .................... [RUN]
+[0m13:08:13  89 of 92 PASS unique_stg_mysql__customers_customer_id .......................... [[32mPASS[0m in 0.03s]
+[0m13:08:13  90 of 92 START test unique_stg_mysql__order_items_order_item_id ................ [RUN]
+[0m13:08:13  90 of 92 PASS unique_stg_mysql__order_items_order_item_id ...................... [[32mPASS[0m in 0.03s]
+[0m13:08:13  91 of 92 START test unique_stg_mysql__orders_order_id .......................... [RUN]
+[0m13:08:13  91 of 92 PASS unique_stg_mysql__orders_order_id ................................ [[32mPASS[0m in 0.03s]
+[0m13:08:13  92 of 92 START test unique_stg_mysql__products_product_id ...................... [RUN]
+[0m13:08:13  92 of 92 PASS unique_stg_mysql__products_product_id ............................ [[32mPASS[0m in 0.02s]
+[0m13:08:13  
+[0m13:08:13  Finished running 92 data tests in 0 hours 0 minutes and 2.80 seconds (2.80s).
+[0m13:08:13  
+[0m13:08:13  [32mCompleted successfully[0m
+[0m13:08:13  
+[0m13:08:13  Done. PASS=92 WARN=0 ERROR=0 SKIP=0 TOTAL=92
+dbt workflow completed successfully.

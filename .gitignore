@@ -1,0 +1,24 @@
+
+.env
+docker/.env
+
+# Artefactos locales del warehouse
+warehouse/*.duckdb
+warehouse/*.lock
+warehouse/extracts/
+
+# Artefactos generados por dbt
+src/dbt/target/
+src/dbt/logs/
+src/dbt/dbt_packages/
+src/dbt/.user.yml
+
+# Entornos y cachés de Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Archivos de editor y sistema operativo
+.vscode/
+.DS_Store
+Thumbs.db

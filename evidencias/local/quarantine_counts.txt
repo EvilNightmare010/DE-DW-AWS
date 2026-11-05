@@ -1,0 +1,7 @@
+quarantine.quarantine_mongodb__navigation_events: 8
+quarantine.quarantine_mongodb__reviews: 8
+quarantine.quarantine_mysql__customers: 4
+quarantine.quarantine_mysql__order_items: 6
+quarantine.quarantine_mysql__orders: 4
+quarantine.quarantine_mysql__products: 2
+rechazos_totales: 32
